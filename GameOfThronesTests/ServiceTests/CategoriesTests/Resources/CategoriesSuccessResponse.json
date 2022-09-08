@@ -1,0 +1,14 @@
+[
+    {
+        "category_name": "Books",
+        "type": 0
+    },
+    {
+        "category_name": "Houses",
+        "type": 1
+    },
+    {
+        "category_name": "Characters",
+        "type": 2
+    }
+]
