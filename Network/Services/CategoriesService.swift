@@ -19,7 +19,7 @@ extension CategoriesSevice : ServiceBase {
     }
     
     var parameters: [String : Any]? {
-        // Paramters in Categories request should be empty, because it doesn't require any param.
+        // Parameters in Categories request should be empty, because it doesn't require any param.
         return [:]
     }
     

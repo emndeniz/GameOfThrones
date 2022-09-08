@@ -1,0 +1,302 @@
+[
+    {
+        "id": "1",
+        "name": "House Algood",
+        "region": "The Westerlands",
+        "title": "A golden wreath, on a blue field with a gold border(Azure, a garland of laurel within a bordure or)"
+    },
+    {
+        "id": "2",
+        "name": "House Allyrion of Godsgrace",
+        "region": "Dorne",
+        "title": "Gyronny Gules and Sable, a hand couped Or"
+    },
+    {
+        "id": "3",
+        "name": "House Amber",
+        "region": "The North",
+        "title": ""
+    },
+    {
+        "id": "4",
+        "name": "House Ambrose",
+        "region": "The Reach",
+        "title": "Or, semy of ants gules"
+    },
+    {
+        "id": "5",
+        "name": "House Appleton of Appleton",
+        "region": "The Reach",
+        "title": "Or, an apple tree eradicated proper fructed gules, quartered with argent, a gatehouse cendrée"
+    },
+    {
+        "id": "6",
+        "name": "House Arryn of Gulltown",
+        "region": "The Vale",
+        "title": ""
+    },
+    {
+        "id": "7",
+        "name": "House Arryn of the Eyrie",
+        "region": "The Vale",
+        "title": "A sky-blue falcon soaring against a white moon, on a sky-blue field(Bleu celeste, upon a plate a falcon volant of the field)"
+    },
+    {
+        "id": "8",
+        "name": "House Ashford of Ashford",
+        "region": "The Reach",
+        "title": "Tenny, a sun in splendour beneath a chevron inverted argent"
+    },
+    {
+        "id": "9",
+        "name": "House Ashwood",
+        "region": "The North",
+        "title": ""
+    },
+    {
+        "id": "10",
+        "name": "House Baelish of Harrenhal",
+        "region": "The Riverlands",
+        "title": "A field of silver mockingbirds, on a green field(Vert, semé of mockingbirds argent)"
+    },
+    {
+        "id": "11",
+        "name": "House Baelish of the Fingers",
+        "region": "The Vale",
+        "title": "A grey stone head with fiery eyes, on a light green field(Vert, a stone head cendrée, orbed gules)"
+    },
+    {
+        "id": "12",
+        "name": "House Ball",
+        "region": "The Reach",
+        "title": "Three white plates upon a chevron red on a white field"
+    },
+    {
+        "id": "13",
+        "name": "House Banefort of Banefort",
+        "region": "The Westerlands",
+        "title": "A black hooded man, on a grey field, within a fiery tressure(Cendrée, a hooded man sable within a tressure rayonné along the outer edge gules)"
+    },
+    {
+        "id": "14",
+        "name": "House Bar Emmon of Sharp Point",
+        "region": "The Crownlands",
+        "title": "Fretty argent and white, a swordfish embowed haurient azure"
+    },
+    {
+        "id": "15",
+        "name": "House Baratheon of Dragonstone",
+        "region": "The Crownlands",
+        "title": "Or, a heart gules enflamed proper charged with a stag's head sable crowned of the field"
+    },
+    {
+        "id": "16",
+        "name": "House Baratheon of King's Landing",
+        "region": "The Crownlands",
+        "title": "A black crowned stag and a gold lion, combatant, on a per pale gold and crimson field(Per pale or and gules, a stag, crowned, sable and a lion of the first combatant)"
+    },
+    {
+        "id": "17",
+        "name": "House Baratheon of Storm's End",
+        "region": "The Stormlands",
+        "title": "A black crowned stag, on a gold field(Or, a stag salient, crowned, sable)"
+    },
+    {
+        "id": "18",
+        "name": "House Beesbury of Honeyholt",
+        "region": "The Reach",
+        "title": "Paly or and sable, on a pale of the last three beehives of the first"
+    },
+    {
+        "id": "19",
+        "name": "House Belmore of Strongsong",
+        "region": "The Vale",
+        "title": "Six silver bells, 3, 2, 1, on a purple field(Purpure, six bells, 3, 2, 1, argent)"
+    },
+    {
+        "id": "20",
+        "name": "House Bettley",
+        "region": "The Westerlands",
+        "title": "Three blue beetles, on a gold field(Or, three beetles azure)"
+    },
+    {
+        "id": "21",
+        "name": "House Bigglestone",
+        "region": "The Riverlands",
+        "title": ""
+    },
+    {
+        "id": "22",
+        "name": "House Blackbar of Bandallon",
+        "region": "The Reach",
+        "title": "Argent, a fess sable"
+    },
+    {
+        "id": "23",
+        "name": "House Blackfyre of King's Landing",
+        "region": "",
+        "title": "Gules, a three headed dragon breathing flames sable"
+    },
+    {
+        "id": "24",
+        "name": "House Blackmont of Blackmont",
+        "region": "Dorne",
+        "title": "A black vulture with a pink infant in its claws, on yellow"
+    },
+    {
+        "id": "25",
+        "name": "House Blackmyre",
+        "region": "The Neck",
+        "title": ""
+    },
+    {
+        "id": "26",
+        "name": "House Blacktyde of Blacktyde",
+        "region": "Iron Islands",
+        "title": "Vairy vert and sable"
+    },
+    {
+        "id": "27",
+        "name": "House Blackwood of Raventree Hall",
+        "region": "The Riverlands",
+        "title": "A flock of ravens surrounding a black shield charged with a dead weirwood, on a scarlet field(Gules, on an escutcheon sable a dead weirwood tree proper, all within an orle of ravens volant sable)"
+    },
+    {
+        "id": "28",
+        "name": "House Blanetree",
+        "region": "The Riverlands",
+        "title": "Green and brown maple leaves, strewn across a yellow field(Or, semé of maple leaves vert and tenné)"
+    },
+    {
+        "id": "29",
+        "name": "House Blount",
+        "region": "The Crownlands",
+        "title": "A red bend sinister between two black porcupines, on a green field(Vert, a bend sinister gules between two porcupines sable)"
+    },
+    {
+        "id": "30",
+        "name": "House Boggs",
+        "region": "The North",
+        "title": ""
+    },
+    {
+        "id": "31",
+        "name": "House Boggs of Crackclaw Point",
+        "region": "The Crownlands",
+        "title": ""
+    },
+    {
+        "id": "32",
+        "name": "House Bole",
+        "region": "The North",
+        "title": ""
+    },
+    {
+        "id": "33",
+        "name": "House Bolling",
+        "region": "The Stormlands",
+        "title": "Vairy orange and blue, upon a black canton, a golden stag beneath an orange bend sinister(Vairy tenné and azure, on a canton sable a stag or debruised by a bend sinister of the first)"
+    },
+    {
+        "id": "34",
+        "name": "House Bolton of the Dreadfort",
+        "region": "The North",
+        "title": "A red flayed man on pink de sang"
+    },
+    {
+        "id": "35",
+        "name": "House Borrell of Sweetsister",
+        "region": "The Vale",
+        "title": "A white spider crab, on a grey-green field(Vert-cendrée, a spider crab argent)"
+    },
+    {
+        "id": "36",
+        "name": "House Botley of Lordsport",
+        "region": "Iron Islands",
+        "title": "Vert, semy of fishes argent"
+    },
+    {
+        "id": "37",
+        "name": "House Bracken of Stone Hedge",
+        "region": "The Riverlands",
+        "title": "A red stallion upon a gold shield, on a brown field(Tenné, on an escutcheon or a stallion rampant gules)"
+    },
+    {
+        "id": "38",
+        "name": "House Branch",
+        "region": "The North",
+        "title": ""
+    },
+    {
+        "id": "39",
+        "name": "House Branfield",
+        "region": "The North",
+        "title": ""
+    },
+    {
+        "id": "40",
+        "name": "House Brax of Hornvale",
+        "region": "The Westerlands",
+        "title": "A purple unicorn, on a silver field(Argent, a unicorn rampant purpure)"
+    },
+    {
+        "id": "41",
+        "name": "House Breakstone",
+        "region": "The Vale",
+        "title": "A red sledge"
+    },
+    {
+        "id": "42",
+        "name": "House Briar",
+        "region": "Dorne",
+        "title": ""
+    },
+    {
+        "id": "43",
+        "name": "House Bridges",
+        "region": "The Reach",
+        "title": "A black stone bridge with three arches upon a golden chief above three blue pallets on white"
+    },
+    {
+        "id": "44",
+        "name": "House Brightstone",
+        "region": "The Vale",
+        "title": ""
+    },
+    {
+        "id": "45",
+        "name": "House Brook",
+        "region": "Dorne",
+        "title": ""
+    },
+    {
+        "id": "46",
+        "name": "House Broom",
+        "region": "The Westerlands",
+        "title": "A silver helm crested with a sprig of broom, on a checkered black and green field(Chequy sable and vert, a helm argent, crested with a sprig of broom proper)"
+    },
+    {
+        "id": "47",
+        "name": "House Brownhill",
+        "region": "Dorne",
+        "title": ""
+    },
+    {
+        "id": "48",
+        "name": "House Brune of Brownhollow",
+        "region": "The Crownlands",
+        "title": "Argent, a bear's paw erased within a double tressure tenné"
+    },
+    {
+        "id": "49",
+        "name": "House Brune of the Dyre Den",
+        "region": "The Crownlands",
+        "title": ""
+    },
+    {
+        "id": "50",
+        "name": "House Buckler of Bronzegate",
+        "region": "The Stormlands",
+        "title": "Three brass buckles, on a blue field(Azure, three buckles or)"
+    }
+]
