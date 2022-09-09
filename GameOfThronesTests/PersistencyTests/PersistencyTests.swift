@@ -12,27 +12,57 @@ import CoreData
 
 class PersistencyTests: XCTestCase {
 
+    
+    var categoryStore: CategoryStore!
+    var coreDataStack: CoreDataStack!
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        coreDataStack = TestCoreDataStack()
+        categoryStore = CategoryStore(managedObjectContext: coreDataStack.mainContext, coreDataStack: coreDataStack)
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        coreDataStack = nil
+        categoryStore = nil
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func test_GivenCategories_WhenSaveFunctionCalled_ThenCategoriesShouldStoredInCoreData() throws {
+        // Given
+        let category1 = CategoryItem(name: "Books", type: 0)
+        let category2 = CategoryItem(name: "Houses", type: 1)
+        
+        // When
+        let result = categoryStore.saveCategories(categories: [category1,category2])
+        
+        // Then
+        XCTAssertNotNil(result, "Report should not be nil")
+        XCTAssertEqual(result.count, 2, "There should be 2 item")
+        XCTAssertEqual(result[0].name, "Books","First category name should be books")
+        XCTAssertEqual(result[0].type, 0,"First category type should be books")
+        XCTAssertEqual(result[1].name, "Houses","Second category name should be books")
+        XCTAssertEqual(result[1].type, 1,"Second category type should be books")
+        
     }
+    
+    
+    func test_GivenCategories_WhenGetFunctionCalled_ThenCategoriesShouldMacthedPreviousStoredData(){
+        // Given
+        let category1 = CategoryItem(name: "Books", type: 0)
+        let category2 = CategoryItem(name: "Houses", type: 1)
+        // Save categories to Core Data to call it on get.
+        categoryStore.saveCategories(categories: [category1,category2])
+        
+        // When
+        let categories = categoryStore.getCategories()
+        
+        XCTAssertNotNil(categories, "Report should not be nil")
+        XCTAssertEqual(categories.count, 2, "There should be 2 item")
+        XCTAssertEqual(categories[0].name, "Books","First category name should be books")
+        XCTAssertEqual(categories[0].type, 0,"First category type should be books")
+        XCTAssertEqual(categories[1].name, "Houses","Second category name should be books")
+        XCTAssertEqual(categories[1].type, 1,"Second category type should be books")
+    }
+  
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
 
 }

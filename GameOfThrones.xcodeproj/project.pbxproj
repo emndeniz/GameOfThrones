@@ -39,6 +39,7 @@
 		01B3FE9028CBD1B500B97EDD /* CategoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3FE8F28CBD1B500B97EDD /* CategoryStore.swift */; };
 		01BE698428CBDC6A0008067B /* PersistencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE698328CBDC6A0008067B /* PersistencyTests.swift */; };
 		01BE698928CBE43F0008067B /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE698728CBE0BD0008067B /* CoreDataStack.swift */; };
+		01BE698B28CBE9CA0008067B /* TestCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE698A28CBE9CA0008067B /* TestCoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		01B3FE8F28CBD1B500B97EDD /* CategoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryStore.swift; sourceTree = "<group>"; };
 		01BE698328CBDC6A0008067B /* PersistencyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyTests.swift; sourceTree = "<group>"; };
 		01BE698728CBE0BD0008067B /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		01BE698A28CBE9CA0008067B /* TestCoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -320,6 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				01BE698328CBDC6A0008067B /* PersistencyTests.swift */,
+				01BE698A28CBE9CA0008067B /* TestCoreDataStack.swift */,
 			);
 			path = PersistencyTests;
 			sourceTree = "<group>";
@@ -487,6 +490,7 @@
 			files = (
 				01B3FE7628CA754900B97EDD /* JSONReader.swift in Sources */,
 				01B3FE8928CA8B8A00B97EDD /* CharactersServiceTest.swift in Sources */,
+				01BE698B28CBE9CA0008067B /* TestCoreDataStack.swift in Sources */,
 				01B3FE3828C93DBA00B97EDD /* GameOfThronesTests.swift in Sources */,
 				01B3FE6B28CA6E1200B97EDD /* MockURLProtocol.swift in Sources */,
 				01B3FE8B28CA8E1E00B97EDD /* HousesServiceTests.swift in Sources */,

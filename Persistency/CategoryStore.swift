@@ -10,7 +10,9 @@ import CoreData
 
 protocol CategoryStoreProtocol {
     func getCategories() -> [CategoryItem]
-    func saveCategories(categories:[CategoryItem])
+    
+    @discardableResult
+    func saveCategories(categories:[CategoryItem]) -> [CategoriesData]
 }
 
 class CategoryStore: CategoryStoreProtocol {
@@ -32,9 +34,10 @@ class CategoryStore: CategoryStoreProtocol {
     }
     
     /// Saves given CategoryItems array to the Core Data
-    /// - Parameter categories: <#categories description#>
-    func saveCategories(categories: [CategoryItem]) {
-        saveCategoryItems(categories: categories)
+    /// - Parameter categories: CategoryItem Array
+    @discardableResult
+    func saveCategories(categories:[CategoryItem]) -> [CategoriesData] {
+        return saveCategoryItems(categories: categories)
     }
     
 }
@@ -62,15 +65,17 @@ extension CategoryStore {
     
     /// Saves  CategoryItem array to Core Data
     /// - Parameter categories: CatoryItem array
-    private func saveCategoryItems(categories: [CategoryItem]){
-        
+    private func saveCategoryItems(categories: [CategoryItem]) -> [CategoriesData]{
+        var categoryDatas: [CategoriesData] = []
         for category in categories {
             let categoryData = CategoriesData(context:managedObjectContext)
             categoryData.name = category.name
             categoryData.type = Int16(category.type)
+            categoryDatas.append(categoryData)
         }
         
         coreDataStack.saveContext()
+        return categoryDatas
     }
     
     /// Loads items from Core Data
