@@ -35,6 +35,10 @@
 		01B3FE8728CA882C00B97EDD /* BooksServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3FE8628CA882C00B97EDD /* BooksServiceTest.swift */; };
 		01B3FE8928CA8B8A00B97EDD /* CharactersServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3FE8828CA8B8A00B97EDD /* CharactersServiceTest.swift */; };
 		01B3FE8B28CA8E1E00B97EDD /* HousesServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3FE8A28CA8E1E00B97EDD /* HousesServiceTests.swift */; };
+		01B3FE8E28CBD16A00B97EDD /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3FE8D28CBD16A00B97EDD /* CategoryItem.swift */; };
+		01B3FE9028CBD1B500B97EDD /* CategoryStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3FE8F28CBD1B500B97EDD /* CategoryStore.swift */; };
+		01BE698428CBDC6A0008067B /* PersistencyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE698328CBDC6A0008067B /* PersistencyTests.swift */; };
+		01BE698928CBE43F0008067B /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE698728CBE0BD0008067B /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +91,10 @@
 		01B3FE8628CA882C00B97EDD /* BooksServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksServiceTest.swift; sourceTree = "<group>"; };
 		01B3FE8828CA8B8A00B97EDD /* CharactersServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersServiceTest.swift; sourceTree = "<group>"; };
 		01B3FE8A28CA8E1E00B97EDD /* HousesServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HousesServiceTests.swift; sourceTree = "<group>"; };
+		01B3FE8D28CBD16A00B97EDD /* CategoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItem.swift; sourceTree = "<group>"; };
+		01B3FE8F28CBD1B500B97EDD /* CategoryStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryStore.swift; sourceTree = "<group>"; };
+		01BE698328CBDC6A0008067B /* PersistencyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistencyTests.swift; sourceTree = "<group>"; };
+		01BE698728CBE0BD0008067B /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				01B3FE1C28C93DB900B97EDD /* GameOfThrones */,
+				01B3FE8C28CBD15400B97EDD /* Persistency */,
 				01B3FE5228CA473F00B97EDD /* Network */,
 				01B3FE3628C93DBA00B97EDD /* GameOfThronesTests */,
 				01B3FE4028C93DBA00B97EDD /* GameOfThronesUITests */,
@@ -153,6 +162,7 @@
 		01B3FE3628C93DBA00B97EDD /* GameOfThronesTests */ = {
 			isa = PBXGroup;
 			children = (
+				01BE698228CBDC450008067B /* PersistencyTests */,
 				01B3FE6928CA6E0500B97EDD /* ServiceTests */,
 				01B3FE3728C93DBA00B97EDD /* GameOfThronesTests.swift */,
 			);
@@ -296,6 +306,24 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		01B3FE8C28CBD15400B97EDD /* Persistency */ = {
+			isa = PBXGroup;
+			children = (
+				01B3FE8D28CBD16A00B97EDD /* CategoryItem.swift */,
+				01B3FE8F28CBD1B500B97EDD /* CategoryStore.swift */,
+				01BE698728CBE0BD0008067B /* CoreDataStack.swift */,
+			);
+			path = Persistency;
+			sourceTree = "<group>";
+		};
+		01BE698228CBDC450008067B /* PersistencyTests */ = {
+			isa = PBXGroup;
+			children = (
+				01BE698328CBDC6A0008067B /* PersistencyTests.swift */,
+			);
+			path = PersistencyTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -435,6 +463,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01BE698928CBE43F0008067B /* CoreDataStack.swift in Sources */,
 				01B3FE2828C93DB900B97EDD /* GameOfThrones.xcdatamodeld in Sources */,
 				01B3FE5928CA4C9800B97EDD /* BooksResponse.swift in Sources */,
 				01B3FE2228C93DB900B97EDD /* ViewController.swift in Sources */,
@@ -442,7 +471,9 @@
 				01B3FE5D28CA4CB000B97EDD /* CharactersResponse.swift in Sources */,
 				01B3FE6828CA636000B97EDD /* CategoriesService.swift in Sources */,
 				01B3FE7928CA86BE00B97EDD /* GOTServices.swift in Sources */,
+				01B3FE9028CBD1B500B97EDD /* CategoryStore.swift in Sources */,
 				01B3FE1E28C93DB900B97EDD /* AppDelegate.swift in Sources */,
+				01B3FE8E28CBD16A00B97EDD /* CategoryItem.swift in Sources */,
 				01B3FE5B28CA4CA500B97EDD /* HousesResponse.swift in Sources */,
 				01B3FE6128CA558900B97EDD /* ServiceBase.swift in Sources */,
 				01B3FE6628CA614200B97EDD /* ServiceProvider.swift in Sources */,
@@ -459,6 +490,7 @@
 				01B3FE3828C93DBA00B97EDD /* GameOfThronesTests.swift in Sources */,
 				01B3FE6B28CA6E1200B97EDD /* MockURLProtocol.swift in Sources */,
 				01B3FE8B28CA8E1E00B97EDD /* HousesServiceTests.swift in Sources */,
+				01BE698428CBDC6A0008067B /* PersistencyTests.swift in Sources */,
 				01B3FE6D28CA6E9300B97EDD /* CategoriesServiceTest.swift in Sources */,
 				01B3FE8728CA882C00B97EDD /* BooksServiceTest.swift in Sources */,
 			);
