@@ -54,7 +54,7 @@ extension CategoryStore {
         
         for item in catogoryDataItems {
             guard let name = item.name else {
-                print("Nil data found for category item, skipping it. \(item)")
+                Logger.log.warning("Nil data found for category item, skipping it", context:item)
                 continue
             }
             let categoryItem = CategoryItem(name: name, type: Int(item.type))
@@ -88,7 +88,7 @@ extension CategoryStore {
             let items = try managedObjectContext.fetch(request)
             return items
         }  catch let error as NSError{
-            print("Could not fetch. \(error), \(error.userInfo)")
+            Logger.log.error("Could not fetch.", context:error)
         }
         
         return []
