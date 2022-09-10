@@ -17,6 +17,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        Logger.startLogger()
+        
+        createInitialWireframe()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -50,6 +54,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         CoreDataStack().saveContext()
     }
 
+    /// Creates Initial Wireframe to start VIPER Flow
+    private func createInitialWireframe() {
+        //Create initial wireframe
+        let initalController = SplashNavigationViewController()
+        initalController.setRootWireframe(SplashWireframe())
+        
+        self.window?.rootViewController = initalController
+        self.window?.makeKeyAndVisible()
+    }
 
 }
 

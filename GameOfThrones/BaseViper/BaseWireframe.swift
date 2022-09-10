@@ -1,6 +1,9 @@
 import UIKit
 
 protocol WireframeInterface: AnyObject {
+    // MARK: - Generic Alert Functions -
+    func showAlert(with title: String?, message: String?)
+    func showAlert(with title: String?, message: String?, actions: [UIAlertAction])
 }
 
 class BaseWireframe<ViewController> where ViewController: UIViewController {
