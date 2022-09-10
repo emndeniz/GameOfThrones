@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		014B7A0528CCAC52003A7C93 /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014B79FF28CCAC52003A7C93 /* BaseWireframe.swift */; };
+		014B7A0728CCAC52003A7C93 /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014B7A0128CCAC52003A7C93 /* UIStoryboardExtension.swift */; };
+		014B7A0828CCAC52003A7C93 /* PresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014B7A0228CCAC52003A7C93 /* PresenterInterface.swift */; };
+		014B7A0928CCAC52003A7C93 /* ViewInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014B7A0328CCAC52003A7C93 /* ViewInterface.swift */; };
+		014B7A0A28CCAC52003A7C93 /* InteractorInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014B7A0428CCAC52003A7C93 /* InteractorInterface.swift */; };
 		01B3FE1E28C93DB900B97EDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3FE1D28C93DB900B97EDD /* AppDelegate.swift */; };
 		01B3FE2028C93DB900B97EDD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3FE1F28C93DB900B97EDD /* SceneDelegate.swift */; };
 		01B3FE2228C93DB900B97EDD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3FE2128C93DB900B97EDD /* ViewController.swift */; };
@@ -62,6 +67,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		014B79FF28CCAC52003A7C93 /* BaseWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWireframe.swift; sourceTree = "<group>"; };
+		014B7A0128CCAC52003A7C93 /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtension.swift; sourceTree = "<group>"; };
+		014B7A0228CCAC52003A7C93 /* PresenterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterInterface.swift; sourceTree = "<group>"; };
+		014B7A0328CCAC52003A7C93 /* ViewInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewInterface.swift; sourceTree = "<group>"; };
+		014B7A0428CCAC52003A7C93 /* InteractorInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorInterface.swift; sourceTree = "<group>"; };
 		01B3FE1A28C93DB900B97EDD /* GameOfThrones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameOfThrones.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01B3FE1D28C93DB900B97EDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01B3FE1F28C93DB900B97EDD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +138,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		014B79F428CCAB42003A7C93 /* SplashScene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SplashScene;
+			sourceTree = "<group>";
+		};
+		014B79F528CCAB9B003A7C93 /* CategoriesScene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CategoriesScene;
+			sourceTree = "<group>";
+		};
+		014B79FE28CCAC41003A7C93 /* BaseViper */ = {
+			isa = PBXGroup;
+			children = (
+				014B79FF28CCAC52003A7C93 /* BaseWireframe.swift */,
+				014B7A0128CCAC52003A7C93 /* UIStoryboardExtension.swift */,
+				014B7A0228CCAC52003A7C93 /* PresenterInterface.swift */,
+				014B7A0328CCAC52003A7C93 /* ViewInterface.swift */,
+				014B7A0428CCAC52003A7C93 /* InteractorInterface.swift */,
+			);
+			path = BaseViper;
+			sourceTree = "<group>";
+		};
+		014B7A0B28CCAD13003A7C93 /* ItemsScene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ItemsScene;
+			sourceTree = "<group>";
+		};
 		01B3FE1128C93DB900B97EDD = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +197,10 @@
 		01B3FE1C28C93DB900B97EDD /* GameOfThrones */ = {
 			isa = PBXGroup;
 			children = (
+				014B79FE28CCAC41003A7C93 /* BaseViper */,
+				014B7A0B28CCAD13003A7C93 /* ItemsScene */,
+				014B79F528CCAB9B003A7C93 /* CategoriesScene */,
+				014B79F428CCAB42003A7C93 /* SplashScene */,
 				01B3FE1D28C93DB900B97EDD /* AppDelegate.swift */,
 				01B3FE1F28C93DB900B97EDD /* SceneDelegate.swift */,
 				01B3FE2128C93DB900B97EDD /* ViewController.swift */,
@@ -481,10 +528,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				014B7A0A28CCAC52003A7C93 /* InteractorInterface.swift in Sources */,
 				01BE698928CBE43F0008067B /* CoreDataStack.swift in Sources */,
 				01B3FE2828C93DB900B97EDD /* GameOfThrones.xcdatamodeld in Sources */,
 				01B3FE5928CA4C9800B97EDD /* BooksResponse.swift in Sources */,
+				014B7A0928CCAC52003A7C93 /* ViewInterface.swift in Sources */,
+				014B7A0828CCAC52003A7C93 /* PresenterInterface.swift in Sources */,
 				01B3FE2228C93DB900B97EDD /* ViewController.swift in Sources */,
+				014B7A0528CCAC52003A7C93 /* BaseWireframe.swift in Sources */,
+				014B7A0728CCAC52003A7C93 /* UIStoryboardExtension.swift in Sources */,
 				01B3FE5728CA4C8A00B97EDD /* CategoriesResponse.swift in Sources */,
 				01B3FE5D28CA4CB000B97EDD /* CharactersResponse.swift in Sources */,
 				01B3FE6828CA636000B97EDD /* CategoriesService.swift in Sources */,
