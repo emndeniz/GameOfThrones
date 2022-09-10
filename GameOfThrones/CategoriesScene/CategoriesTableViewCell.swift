@@ -14,5 +14,9 @@ class CategoriesTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
+    
+    func loadData(data:CategoryItem){
+        categoryLabel.text = data.name
+    }
 
 }

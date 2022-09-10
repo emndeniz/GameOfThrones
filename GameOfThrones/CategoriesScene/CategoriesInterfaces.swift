@@ -10,7 +10,9 @@
 
 import UIKit
 
+
 protocol CategoriesWireframeInterface: WireframeInterface {
+    func navigateToItemsScene(items:[ItemsModelProtocol])
 }
 
 protocol CategoriesViewInterface: ViewInterface {
@@ -19,7 +21,9 @@ protocol CategoriesViewInterface: ViewInterface {
 protocol CategoriesPresenterInterface: PresenterInterface {
     var numberOfRows: Int { get }
     func categoryAtIndex(index:Int) -> CategoryItem
+    func didSelectRow(index:Int)
 }
 
 protocol CategoriesInteractorInterface: InteractorInterface {
+    func fetchItems(type:Int, _ completion:@escaping ((Result<[ItemsModelProtocol], APIError>) -> Void))
 }

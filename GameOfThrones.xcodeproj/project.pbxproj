@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0126D1DA28CD0B8500A51FE4 /* ItemsModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0126D1D928CD0B8500A51FE4 /* ItemsModelProtocol.swift */; };
 		014AEE7328CCFF7800ECC1C2 /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014AEE7228CCFF7800ECC1C2 /* CategoriesTableViewCell.swift */; };
 		014B7A0528CCAC52003A7C93 /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014B79FF28CCAC52003A7C93 /* BaseWireframe.swift */; };
 		014B7A0728CCAC52003A7C93 /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014B7A0128CCAC52003A7C93 /* UIStoryboardExtension.swift */; };
@@ -82,6 +83,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0126D1D928CD0B8500A51FE4 /* ItemsModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsModelProtocol.swift; sourceTree = "<group>"; };
 		014AEE7228CCFF7800ECC1C2 /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		014B79FF28CCAC52003A7C93 /* BaseWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWireframe.swift; sourceTree = "<group>"; };
 		014B7A0128CCAC52003A7C93 /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtension.swift; sourceTree = "<group>"; };
@@ -310,6 +312,7 @@
 				01B3FE5828CA4C9800B97EDD /* BooksResponse.swift */,
 				01B3FE5A28CA4CA500B97EDD /* HousesResponse.swift */,
 				01B3FE5C28CA4CB000B97EDD /* CharactersResponse.swift */,
+				0126D1D928CD0B8500A51FE4 /* ItemsModelProtocol.swift */,
 			);
 			path = RestModels;
 			sourceTree = "<group>";
@@ -622,6 +625,7 @@
 				01B3FE6128CA558900B97EDD /* ServiceBase.swift in Sources */,
 				01B3FE6628CA614200B97EDD /* ServiceProvider.swift in Sources */,
 				01653C6428CCFDFF006D616E /* CategoriesPresenter.swift in Sources */,
+				0126D1DA28CD0B8500A51FE4 /* ItemsModelProtocol.swift in Sources */,
 				01B3FE2028C93DB900B97EDD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

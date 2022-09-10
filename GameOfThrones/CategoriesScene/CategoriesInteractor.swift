@@ -11,9 +11,75 @@
 import Foundation
 
 final class CategoriesInteractor {
+    private var serviceProvider: ServiceProvider<GOTServices>
+    
+    init(serviceProvider: ServiceProvider<GOTServices> = ServiceProvider<GOTServices>()){
+        self.serviceProvider = serviceProvider
+    }
 }
 
 // MARK: - Extensions -
 
 extension CategoriesInteractor: CategoriesInteractorInterface {
+    func fetchItems(type:Int, _ completion:@escaping ((Result<[ItemsModelProtocol], APIError>) -> Void)){
+        
+        
+        guard let service = GOTServices(rawValue: type) else {
+            return
+        }
+        
+        
+        switch service {
+        case .books:
+          getBooks(completion)
+        case .houses:
+           getHouses(completion)
+        case .characters:
+           getCharacters(completion)
+        }
+        
+    }
+    
+  
+    private func getBooks( _ completion:@escaping ((Result<[ItemsModelProtocol], APIError>) -> Void)) {
+        serviceProvider.request(service: .books, decodeType: BooksResponse.self) { result in
+            switch result {
+
+            case .success(let data):
+                completion(.success(data))
+                
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+
+    private func getHouses( _ completion:@escaping ((Result<[ItemsModelProtocol], APIError>) -> Void)){
+        serviceProvider.request(service: .houses, decodeType: HousesResponse.self) { result in
+            switch result {
+
+            case .success(let data):
+                completion(.success(data))
+                
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+    
+    private func getCharacters( _ completion:@escaping ((Result<[ItemsModelProtocol], APIError>) -> Void)){
+        serviceProvider.request(service: .characters, decodeType: CharactersResponse.self) { result in
+            switch result {
+
+            case .success(let data):
+                completion(.success(data))
+                
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+
 }
+
+

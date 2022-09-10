@@ -35,4 +35,8 @@ final class CategoriesWireframe: BaseWireframe<CategoriesViewController> {
 // MARK: - Extensions -
 
 extension CategoriesWireframe: CategoriesWireframeInterface {
+    func navigateToItemsScene(items: [ItemsModelProtocol]) {
+        // TODO: Will be implement
+    }
+    
 }

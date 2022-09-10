@@ -39,6 +39,23 @@ final class CategoriesPresenter {
 // MARK: - Extensions -
 
 extension CategoriesPresenter: CategoriesPresenterInterface {
+    func didSelectRow(index: Int) {
+        
+        let selectedCategory = categories[index]
+
+        interactor.fetchItems(type: selectedCategory.type) { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+                
+            case .success(let data):
+                self.wireframe.navigateToItemsScene(items: data)
+            case .failure(_):
+                let message:String = CategoriesPresenterErrorMessages.failedToFetchCategories(name:selectedCategory.name).description
+                self.wireframe.showAlert(with: "Error", message: message)
+            }
+        }
+    }
+    
     func categoryAtIndex(index: Int) -> CategoryItem {
         categories[index]
     }
@@ -47,4 +64,16 @@ extension CategoriesPresenter: CategoriesPresenterInterface {
         return categories.count
     }
     
+}
+
+
+enum CategoriesPresenterErrorMessages{
+    case failedToFetchCategories(name:String)
+    
+    var description:String {
+        switch self {
+        case .failedToFetchCategories(let name):
+            return "Failed to fetch data for \(name)"
+        }
+    }
 }

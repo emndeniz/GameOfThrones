@@ -12,7 +12,9 @@ import Foundation
 
 typealias CharactersResponse = [CharactersResponseElement]
 
-struct CharactersResponseElement: Codable {
+struct CharactersResponseElement: Codable, ItemsModelProtocol {
+
+    
     let id, name: String?
     let gender: Gender?
     let culture, born, died: String?
@@ -20,6 +22,8 @@ struct CharactersResponseElement: Codable {
     let father, mother, spouse: String?
     let allegiances: [String]?
     let playedBy: [String]?
+    
+    
 }
 
 enum Gender: String, Codable {

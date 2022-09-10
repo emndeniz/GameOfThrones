@@ -12,8 +12,9 @@ import Foundation
 
 typealias HousesResponse = [HousesResponseElement]
 
-struct HousesResponseElement: Codable {
+struct HousesResponseElement: Codable, ItemsModelProtocol {
     let id, name, region, title: String?
+    
 }
 
 

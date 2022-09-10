@@ -31,6 +31,10 @@ extension CategoriesViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter.numberOfRows
@@ -38,13 +42,15 @@ extension CategoriesViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoriesTableViewCell") as! CategoriesTableViewCell
-        cell.categoryLabel.text = presenter.categoryAtIndex(index: indexPath.row).name
+        cell.loadData(data: presenter.categoryAtIndex(index: indexPath.row))
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.didSelectRow(index: indexPath.row)
     }
+    
+    
 }
 
 extension CategoriesViewController: CategoriesViewInterface {
