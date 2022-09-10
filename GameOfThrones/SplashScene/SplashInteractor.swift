@@ -11,11 +11,23 @@
 import Foundation
 
 final class SplashInteractor {
-    private var coreDataStack = CoreDataStack()
-    private lazy var categoryStore = CategoryStore(managedObjectContext: coreDataStack.mainContext,
-                                                   coreDataStack: coreDataStack)
+    private let coreDataStack: CoreDataStack = CoreDataStack()
+    private var categoryStore: CategoryStoreProtocol
     
-    private lazy var serviceProvider = ServiceProvider<CategoriesSevice>()
+    private var serviceProvider: ServiceProvider<CategoriesSevice>
+    
+    
+    init (categoryStore: CategoryStoreProtocol? = nil,
+          serviceProvider: ServiceProvider<CategoriesSevice> = ServiceProvider<CategoriesSevice>()){
+        // Allows injection
+        if let categoryStore = categoryStore {
+            self.categoryStore = categoryStore
+        }else {
+            self.categoryStore =  CategoryStore(managedObjectContext: coreDataStack.mainContext, coreDataStack: coreDataStack)
+        }
+       
+        self.serviceProvider = serviceProvider
+    }
 }
 
 // MARK: - Public Functions -
@@ -50,8 +62,10 @@ extension SplashInteractor {
             switch result {
             case .success(let response):
                 Logger.log.verbose("Categories fetched successfully, categories:",context: response)
+                //First store data from API to DB
                 let itemArray = self.createCategoryItems(response: response)
                 self.saveCategoriesToCoreData(categories: itemArray)
+                
                 completion(.success(itemArray))
             case .failure(let err):
                 Logger.log.error("Failed to fetch categories, error:", context: err)

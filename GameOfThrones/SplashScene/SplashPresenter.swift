@@ -42,9 +42,13 @@ extension SplashPresenter: SplashPresenterInterface {
             case .success(let categories):
                 self.wireframe.navigateToategories(categories: categories)
             case .failure(_):
-                self.wireframe.showAlert(with: "Error", message: "Failed to fetch categories")
+                self.wireframe.showAlert(with: "Error", message: SplashPresenterErrorMessages.failedToFetchCategories.rawValue)
             }
         }
     }
     
+}
+
+enum SplashPresenterErrorMessages: String{
+    case failedToFetchCategories = "Failed to fetch categories"
 }

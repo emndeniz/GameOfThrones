@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 /// Service Results Enum will return easy to undestand API responses to upper layers.
 enum ServiceResult<T> {
     case success(T)
@@ -80,10 +81,7 @@ class ServiceProvider<T: ServiceBase> {
     }
     
     
-    
-    private func parseError(error:Error){
-        
-    }
+
     
 }
 
