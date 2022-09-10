@@ -58,8 +58,6 @@ class HousesServiceTests: XCTestCase {
               
                 case .failure(let error):
                     XCTFail("Error was not expected: \(error.localizedDescription)")
-                case .empty:
-                    XCTFail("Empty case not expecting")
             }
             
             self.expectation.fulfill()
@@ -87,10 +85,8 @@ class HousesServiceTests: XCTestCase {
             case .success(_):
                     XCTFail("Success was not expected")
                 case .failure(let error):
-                XCTAssertEqual(error.localizedDescription, "The data couldn’t be read because it isn’t in the correct format." , "Parsing error was expected.")
-                  //  XCTFail("Error was not expected: \(error.localizedDescription)")
-                case .empty:
-                    XCTFail("Empty case not expecting")
+                
+                XCTAssertEqual(error.localizedDescription, APIError.jsonConversionFailure.localizedDescription)
             }
             
             self.expectation.fulfill()

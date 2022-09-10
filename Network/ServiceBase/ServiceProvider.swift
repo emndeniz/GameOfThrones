@@ -7,11 +7,25 @@
 
 import Foundation
 
+
 /// Service Results Enum will return easy to undestand API responses to upper layers.
 enum ServiceResult<T> {
     case success(T)
-    case failure(Error)
-    case empty
+    case failure(APIError)
+}
+
+/// Customized APIErrors for the app
+enum APIError: Error {
+    case jsonConversionFailure
+    case invalidData
+    case responseUnsuccessful(Error)
+    var localizedDescription: String {
+        switch self {
+        case .invalidData: return "Invalid Data"
+        case .responseUnsuccessful: return "Response Unsuccessful"
+        case .jsonConversionFailure: return "JSON Conversion Failure"
+        }
+    }
 }
 
 
@@ -36,20 +50,19 @@ class ServiceProvider<T: ServiceBase> {
                 let decoder = JSONDecoder()
                 do {
                     let response = try decoder.decode(decodeType, from: data)
+                    Logger.log.debug("Successfull response received, response:", context: response)
                     completion(.success(response))
                 }
-                catch {
-                    completion(.failure(error))
+                catch let error{
+                    Logger.log.error("Failed to decode received data :", context: error)
+                    completion(.failure(.jsonConversionFailure))
                 }
             case .failure(let error):
                 completion(.failure(error))
-            case .empty:
-                completion(.empty)
             }
         }
     }
     
-
     
     
     /// Executes given request.
@@ -61,11 +74,13 @@ class ServiceProvider<T: ServiceBase> {
                              deliveryQueue:DispatchQueue = DispatchQueue.main,
                              completion: @escaping ((ServiceResult<Data>) -> Void)){
         
-        urlSession.dataTask(with: request) { data, _ , error in
+        Logger.log.debug("App will send request, request:", context: request)
+        urlSession.dataTask(with: request) { data, response , error in
             
             if let error = error {
                 deliveryQueue.async{
-                    completion(.failure(error))
+                    Logger.log.error("Error recevied on request, error:", context: error)
+                    completion(.failure(.responseUnsuccessful(error)))
                 }
             }else if let data = data {
                 deliveryQueue.async{
@@ -73,17 +88,15 @@ class ServiceProvider<T: ServiceBase> {
                 }
             }else {
                 deliveryQueue.async{
-                    completion(.empty)
+                    Logger.log.error("Invalid data received, response:", context: response)
+                    completion(.failure(.invalidData))
                 }
             }
         }.resume()
     }
     
     
-    
-    private func parseError(error:Error){
-        
-    }
+
     
 }
 
