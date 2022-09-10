@@ -33,8 +33,8 @@ final class SplashWireframe: BaseWireframe<SplashViewController> {
 
 extension SplashWireframe: SplashWireframeInterface {
     func navigateToategories(categories: [CategoryItem]) {
-       
-        // TODO: Will be implment
+        navigationController?.setRootWireframe(CategoriesWireframe(categories: categories))
+        
     }
     
 }

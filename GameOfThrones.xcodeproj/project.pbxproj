@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		014AEE7328CCFF7800ECC1C2 /* CategoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014AEE7228CCFF7800ECC1C2 /* CategoriesTableViewCell.swift */; };
 		014B7A0528CCAC52003A7C93 /* BaseWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014B79FF28CCAC52003A7C93 /* BaseWireframe.swift */; };
 		014B7A0728CCAC52003A7C93 /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014B7A0128CCAC52003A7C93 /* UIStoryboardExtension.swift */; };
 		014B7A0828CCAC52003A7C93 /* PresenterInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014B7A0228CCAC52003A7C93 /* PresenterInterface.swift */; };
@@ -21,6 +22,12 @@
 		014B7A1928CCB0E0003A7C93 /* SplashNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014B7A1828CCB0E0003A7C93 /* SplashNavigationViewController.swift */; };
 		01653C5928CCCBD8006D616E /* SplashInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01653C5828CCCBD8006D616E /* SplashInteractorTests.swift */; };
 		01653C5B28CCDE6D006D616E /* SplashPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01653C5A28CCDE6D006D616E /* SplashPresenterTests.swift */; };
+		01653C6228CCFDFF006D616E /* Categories.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01653C5C28CCFDFF006D616E /* Categories.storyboard */; };
+		01653C6328CCFDFF006D616E /* CategoriesInterfaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01653C5D28CCFDFF006D616E /* CategoriesInterfaces.swift */; };
+		01653C6428CCFDFF006D616E /* CategoriesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01653C5E28CCFDFF006D616E /* CategoriesPresenter.swift */; };
+		01653C6528CCFDFF006D616E /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01653C5F28CCFDFF006D616E /* CategoriesViewController.swift */; };
+		01653C6628CCFDFF006D616E /* CategoriesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01653C6028CCFDFF006D616E /* CategoriesInteractor.swift */; };
+		01653C6728CCFDFF006D616E /* CategoriesWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01653C6128CCFDFF006D616E /* CategoriesWireframe.swift */; };
 		01B3FE1E28C93DB900B97EDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3FE1D28C93DB900B97EDD /* AppDelegate.swift */; };
 		01B3FE2028C93DB900B97EDD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B3FE1F28C93DB900B97EDD /* SceneDelegate.swift */; };
 		01B3FE2528C93DB900B97EDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01B3FE2328C93DB900B97EDD /* Main.storyboard */; };
@@ -75,6 +82,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		014AEE7228CCFF7800ECC1C2 /* CategoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesTableViewCell.swift; sourceTree = "<group>"; };
 		014B79FF28CCAC52003A7C93 /* BaseWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWireframe.swift; sourceTree = "<group>"; };
 		014B7A0128CCAC52003A7C93 /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtension.swift; sourceTree = "<group>"; };
 		014B7A0228CCAC52003A7C93 /* PresenterInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterInterface.swift; sourceTree = "<group>"; };
@@ -89,6 +97,12 @@
 		014B7A1828CCB0E0003A7C93 /* SplashNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashNavigationViewController.swift; sourceTree = "<group>"; };
 		01653C5828CCCBD8006D616E /* SplashInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashInteractorTests.swift; sourceTree = "<group>"; };
 		01653C5A28CCDE6D006D616E /* SplashPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenterTests.swift; sourceTree = "<group>"; };
+		01653C5C28CCFDFF006D616E /* Categories.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Categories.storyboard; sourceTree = "<group>"; };
+		01653C5D28CCFDFF006D616E /* CategoriesInterfaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesInterfaces.swift; sourceTree = "<group>"; };
+		01653C5E28CCFDFF006D616E /* CategoriesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesPresenter.swift; sourceTree = "<group>"; };
+		01653C5F28CCFDFF006D616E /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		01653C6028CCFDFF006D616E /* CategoriesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesInteractor.swift; sourceTree = "<group>"; };
+		01653C6128CCFDFF006D616E /* CategoriesWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesWireframe.swift; sourceTree = "<group>"; };
 		01B3FE1A28C93DB900B97EDD /* GameOfThrones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameOfThrones.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01B3FE1D28C93DB900B97EDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01B3FE1F28C93DB900B97EDD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -171,6 +185,13 @@
 		014B79F528CCAB9B003A7C93 /* CategoriesScene */ = {
 			isa = PBXGroup;
 			children = (
+				01653C5C28CCFDFF006D616E /* Categories.storyboard */,
+				01653C5D28CCFDFF006D616E /* CategoriesInterfaces.swift */,
+				01653C5E28CCFDFF006D616E /* CategoriesPresenter.swift */,
+				01653C5F28CCFDFF006D616E /* CategoriesViewController.swift */,
+				01653C6028CCFDFF006D616E /* CategoriesInteractor.swift */,
+				01653C6128CCFDFF006D616E /* CategoriesWireframe.swift */,
+				014AEE7228CCFF7800ECC1C2 /* CategoriesTableViewCell.swift */,
 			);
 			path = CategoriesScene;
 			sourceTree = "<group>";
@@ -537,6 +558,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01653C6228CCFDFF006D616E /* Categories.storyboard in Resources */,
 				01B3FE2D28C93DBA00B97EDD /* LaunchScreen.storyboard in Resources */,
 				01B3FE2A28C93DBA00B97EDD /* Assets.xcassets in Resources */,
 				01B3FE2528C93DB900B97EDD /* Main.storyboard in Resources */,
@@ -570,20 +592,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				014B7A0A28CCAC52003A7C93 /* InteractorInterface.swift in Sources */,
+				014AEE7328CCFF7800ECC1C2 /* CategoriesTableViewCell.swift in Sources */,
 				01BE698928CBE43F0008067B /* CoreDataStack.swift in Sources */,
 				014B7A1628CCAF8B003A7C93 /* SplashInteractor.swift in Sources */,
 				014B7A1328CCAF8B003A7C93 /* SplashInterfaces.swift in Sources */,
 				01B3FE2828C93DB900B97EDD /* GameOfThrones.xcdatamodeld in Sources */,
+				01653C6528CCFDFF006D616E /* CategoriesViewController.swift in Sources */,
 				01B3FE5928CA4C9800B97EDD /* BooksResponse.swift in Sources */,
 				014B7A0928CCAC52003A7C93 /* ViewInterface.swift in Sources */,
 				014B7A0828CCAC52003A7C93 /* PresenterInterface.swift in Sources */,
 				014B7A1928CCB0E0003A7C93 /* SplashNavigationViewController.swift in Sources */,
 				014B7A0528CCAC52003A7C93 /* BaseWireframe.swift in Sources */,
+				01653C6328CCFDFF006D616E /* CategoriesInterfaces.swift in Sources */,
 				014B7A1428CCAF8B003A7C93 /* SplashPresenter.swift in Sources */,
 				014B7A1728CCAF8B003A7C93 /* SplashWireframe.swift in Sources */,
 				014B7A0728CCAC52003A7C93 /* UIStoryboardExtension.swift in Sources */,
 				01B3FE5728CA4C8A00B97EDD /* CategoriesResponse.swift in Sources */,
 				01B3FE5D28CA4CB000B97EDD /* CharactersResponse.swift in Sources */,
+				01653C6728CCFDFF006D616E /* CategoriesWireframe.swift in Sources */,
 				01B3FE6828CA636000B97EDD /* CategoriesService.swift in Sources */,
 				01BE699128CBF14D0008067B /* Logger.swift in Sources */,
 				014B7A1528CCAF8B003A7C93 /* SplashViewController.swift in Sources */,
@@ -591,9 +617,11 @@
 				01B3FE9028CBD1B500B97EDD /* CategoryStore.swift in Sources */,
 				01B3FE1E28C93DB900B97EDD /* AppDelegate.swift in Sources */,
 				01B3FE8E28CBD16A00B97EDD /* CategoryItem.swift in Sources */,
+				01653C6628CCFDFF006D616E /* CategoriesInteractor.swift in Sources */,
 				01B3FE5B28CA4CA500B97EDD /* HousesResponse.swift in Sources */,
 				01B3FE6128CA558900B97EDD /* ServiceBase.swift in Sources */,
 				01B3FE6628CA614200B97EDD /* ServiceProvider.swift in Sources */,
+				01653C6428CCFDFF006D616E /* CategoriesPresenter.swift in Sources */,
 				01B3FE2028C93DB900B97EDD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
