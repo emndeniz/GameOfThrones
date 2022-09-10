@@ -32,7 +32,7 @@ final class SplashInteractor {
 
 // MARK: - Public Functions -
 extension SplashInteractor: SplashInteractorInterface {
-    func loadCategories(_ completion:@escaping ((Result<[CategoryItem], Error>) -> Void)) {
+    func loadCategories(_ completion:@escaping ((Result<[CategoryItem], APIError>) -> Void)) {
         
         let categories = categoryStore.getCategories()
         Logger.log.verbose("Getting categories from DB if exists, categories:", context: categories)
@@ -55,7 +55,7 @@ extension SplashInteractor {
     
     ///  Fetches categories from API and returns result in completion block
     /// - Parameter completion: Completion block form API request result
-    private func fetchCategoriesFromAPI(_ completion:@escaping ((Result<[CategoryItem], Error>) -> Void)){
+    private func fetchCategoriesFromAPI(_ completion:@escaping ((Result<[CategoryItem], APIError>) -> Void)){
         Logger.log.verbose("Fetching categories from API")
         serviceProvider.request(service: .categories, decodeType: CategoriesResponse.self) { [weak self] result in
             guard let self = self else { return }
@@ -70,16 +70,13 @@ extension SplashInteractor {
             case .failure(let err):
                 Logger.log.error("Failed to fetch categories, error:", context: err)
                 completion(.failure(err))
-            case .empty:
-                Logger.log.error("Response fetched but categories are empty")
-                //TODO: Empty cases??
             }
         }
     }
     
     
     /// Saves fetched categories to the Core Data
-    /// - Parameter categories: <#categories description#>
+    /// - Parameter categories: CategoryItem array
     private func saveCategoriesToCoreData(categories:[CategoryItem]){
         Logger.log.verbose("Saving categories to CoreData", context: categories)
         categoryStore.saveCategories(categories: categories)

@@ -82,9 +82,9 @@ private class MockInteractor: SplashInteractorInterface{
         self.isReturnFailure = isReturnFailure
     }
     
-    func loadCategories(_ completion: @escaping ((Result<[CategoryItem], Error>) -> Void)) {
+    func loadCategories(_ completion: @escaping ((Result<[CategoryItem], APIError>) -> Void)) {
         if isReturnFailure {
-            completion(.failure(NSError(domain: "Not Found", code: 404)))
+            completion(.failure(.invalidData))
         }else {
             completion(.success(categories))
         }

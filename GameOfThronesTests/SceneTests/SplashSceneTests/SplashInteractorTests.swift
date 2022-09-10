@@ -139,8 +139,9 @@ class SplashInteractorTests: XCTestCase {
             case .success(let categories):
                 XCTFail("Success is not expected")
                 
-            case .failure(let err):
-                XCTAssertEqual(err.localizedDescription, "The operation couldn’t be completed. (Not Found error 404.)")
+            case .failure(let error):
+                let err = error as! APIError
+                XCTAssertEqual(err.localizedDescription, APIError.invalidData.localizedDescription)
             }
             self.expectation.fulfill()
         }
@@ -179,7 +180,8 @@ private class MockServiceProvider : ServiceProvider<CategoriesSevice> {
     
     override func request<U>(service:CategoriesSevice, decodeType: U.Type, completion: @escaping ((ServiceResult<U>) -> Void)) where U: Codable {
         if isReturnFailure {
-            completion(.failure(NSError(domain: "Not Found", code: 404)))
+           // completion(.failure(.responseUnsuccessful(NSError(domain: "Not Found", code: 404))))
+            completion(.failure(.invalidData))
         }else {
             completion(.success(categories as! U))
         }

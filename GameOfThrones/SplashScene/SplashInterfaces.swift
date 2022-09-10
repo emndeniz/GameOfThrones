@@ -28,5 +28,5 @@ protocol SplashPresenterInterface: PresenterInterface {
 protocol SplashInteractorInterface: InteractorInterface {
     /// Loads categories from required entities
     /// - Parameter completion: Completion block for retrieving Categories
-    func loadCategories(_ completion:@escaping ((Result<[CategoryItem], Error>) -> Void))
+    func loadCategories(_ completion:@escaping ((Result<[CategoryItem], APIError>) -> Void))
 }
