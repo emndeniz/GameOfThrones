@@ -18,11 +18,13 @@ enum ServiceResult<T> {
 enum APIError: Error {
     case jsonConversionFailure
     case invalidData
+    case invalidRequest
     case responseUnsuccessful(Error)
     var localizedDescription: String {
         switch self {
         case .invalidData: return "Invalid Data"
         case .responseUnsuccessful: return "Response Unsuccessful"
+        case .invalidRequest: return "Invalid Request Type"
         case .jsonConversionFailure: return "JSON Conversion Failure"
         }
     }
@@ -43,7 +45,7 @@ class ServiceProvider<T: ServiceBase> {
     ///   - service: Service Type
     ///   - decodeType: Decoder Type to return response
     ///   - completion: Completion with Service Result
-    func request<U>(service:T, decodeType: U.Type, completion: @escaping ((ServiceResult<U>) -> Void)) where U: Codable {
+    func request<U>(service:T, decodeType: U.Type, completion: @escaping ((ServiceResult<U>) -> Void)) where U: Decodable {
         execute(service.urlRequest) { result in
             switch result {
             case .success(let data):

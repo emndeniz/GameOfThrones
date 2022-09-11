@@ -33,7 +33,7 @@ class CategoriesServiceTests: XCTestCase {
     func test_givenCategoriesRequest_whenResponseSuccessFull_thenShouldContainRquiredData() throws {
 
         
-        let data = JSONReader().readLocalFile(forName: "CategoriesSuccessResponse")
+        let data = JSONTestHelper().readLocalFile(name: "CategoriesSuccessResponse")
         
         MockURLProtocol.requestHandler = { request in
             guard let url = request.url, url == self.apiURL else {

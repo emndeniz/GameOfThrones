@@ -29,7 +29,7 @@ class HousesServiceTests: XCTestCase {
     func test_givenHousesRequest_whenResponseSuccessFull_thenShouldContainRquiredData() throws {
         
         // Given
-        let data = JSONReader().readLocalFile(forName: "HousesSuccessResponse")
+        let data = JSONTestHelper().readLocalFile(name: "HousesSuccessResponse")
         
         MockURLProtocol.requestHandler = { request in
             guard let url = request.url, url == self.apiURL else {

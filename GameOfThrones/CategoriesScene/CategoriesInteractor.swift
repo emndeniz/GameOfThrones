@@ -23,11 +23,11 @@ final class CategoriesInteractor {
 extension CategoriesInteractor: CategoriesInteractorInterface {
     func fetchItems(type:Int, _ completion:@escaping ((Result<[ItemsModelProtocol], APIError>) -> Void)){
         
-        
         guard let service = GOTServices(rawValue: type) else {
+            Logger.log.warning("Unkonwn service type received, type:", context: type)
+            completion(.failure(.invalidRequest))
             return
         }
-        
         
         switch service {
         case .books:
@@ -40,7 +40,7 @@ extension CategoriesInteractor: CategoriesInteractorInterface {
         
     }
     
-  
+    
     private func getBooks( _ completion:@escaping ((Result<[ItemsModelProtocol], APIError>) -> Void)) {
         serviceProvider.request(service: .books, decodeType: BooksResponse.self) { result in
             switch result {

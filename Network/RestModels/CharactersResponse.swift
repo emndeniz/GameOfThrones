@@ -12,7 +12,7 @@ import Foundation
 
 typealias CharactersResponse = [CharactersResponseElement]
 
-struct CharactersResponseElement: Codable, ItemsModelProtocol {
+struct CharactersResponseElement: Decodable, ItemsModelProtocol {
 
     
     let id, name: String?
@@ -26,7 +26,7 @@ struct CharactersResponseElement: Codable, ItemsModelProtocol {
     
 }
 
-enum Gender: String, Codable {
+enum Gender: String, Decodable {
     case female = "Female"
     case male = "Male"
 }
