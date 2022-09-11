@@ -178,7 +178,7 @@ private class MockServiceProvider : ServiceProvider<CategoriesSevice> {
         self.isReturnFailure = isReturnFailure
     }
     
-    override func request<U>(service:CategoriesSevice, decodeType: U.Type, completion: @escaping ((ServiceResult<U>) -> Void)) where U: Codable {
+    override func request<U>(service:CategoriesSevice, decodeType: U.Type, completion: @escaping ((ServiceResult<U>) -> Void)) where U: Decodable {
         if isReturnFailure {
            // completion(.failure(.responseUnsuccessful(NSError(domain: "Not Found", code: 404))))
             completion(.failure(.invalidData))

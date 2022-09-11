@@ -12,7 +12,7 @@ import Foundation
 /// https://androidtestmobgen.docs.apiary.io/#reference/0/categories-collection/list-all-categories
 typealias CategoriesResponse = [CategoriesResponseElement]
 
-struct CategoriesResponseElement: Codable {
+struct CategoriesResponseElement: Decodable {
     let categoryName: String?
     let type: Int?
 

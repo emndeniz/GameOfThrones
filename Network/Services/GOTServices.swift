@@ -9,7 +9,7 @@ import Foundation
 
 
 /// This enum handles Categories request to Game of Thrones API.
-enum GOTServices {
+enum GOTServices: Int {
     case books
     case houses
     case characters
