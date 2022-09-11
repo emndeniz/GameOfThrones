@@ -22,18 +22,36 @@ class PersistencyTests: XCTestCase {
     }
 
     override func tearDownWithError() throws {
+        deleteAllPersistedData()
         coreDataStack = nil
         categoryStore = nil
+        
+    }
+    
+    /// Clean ups all persisted data for next tests
+    private func deleteAllPersistedData(){
+        var objects: [CategoriesData] = []
+        let request: NSFetchRequest<CategoriesData> = CategoriesData.fetchRequest()
+        
+        do {
+            objects = try coreDataStack.mainContext.fetch(request)
+        }  catch let error as NSError{
+            fatalError("Couldn't fetched")
+        }
+        
+        for obj in objects {
+            coreDataStack.mainContext.delete(obj)
+        }
     }
 
     func test_GivenCategories_WhenSaveFunctionCalled_ThenCategoriesShouldStoredInCoreData() throws {
         // Given
         let category1 = CategoryItem(name: "Books", type: 0)
         let category2 = CategoryItem(name: "Houses", type: 1)
-        
+
         // When
         let result = categoryStore.saveCategories(categories: [category1,category2])
-        
+
         // Then
         XCTAssertNotNil(result, "Report should not be nil")
         XCTAssertEqual(result.count, 2, "There should be 2 item")
@@ -41,7 +59,7 @@ class PersistencyTests: XCTestCase {
         XCTAssertEqual(result[0].type, 0,"First category type should be books")
         XCTAssertEqual(result[1].name, "Houses","Second category name should be books")
         XCTAssertEqual(result[1].type, 1,"Second category type should be books")
-        
+
     }
     
     
