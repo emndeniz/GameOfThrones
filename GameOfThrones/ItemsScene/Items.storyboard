@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20037"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Items View Controller-->
+        <scene sceneID="AzB-bq-Nrr">
+            <objects>
+                <tableViewController storyboardIdentifier="ItemsViewController" id="hyP-BF-vdo" customClass="ItemsViewController" customModule="GameOfThrones" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="iCZ-6V-pEh">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ItemWithImageTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemWithImageTableViewCell" rowHeight="100" id="6Cq-8q-FvC" userLabel="ItemWithImageTableViewCell" customClass="ItemWithImageTableViewCell" customModule="GameOfThrones" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Cq-8q-FvC" id="BIK-bz-G3m">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3MS-DL-kJU">
+                                            <rect key="frame" x="94" y="15" width="284" height="70"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CWE-0m-Lz2">
+                                            <rect key="frame" x="12" y="15" width="70" height="70"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="70" id="2Fp-vA-iqh"/>
+                                                <constraint firstAttribute="width" constant="70" id="3rW-M7-LBi"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="CWE-0m-Lz2" firstAttribute="top" secondItem="BIK-bz-G3m" secondAttribute="top" constant="15" id="99u-6N-E3T"/>
+                                        <constraint firstItem="3MS-DL-kJU" firstAttribute="leading" secondItem="CWE-0m-Lz2" secondAttribute="trailing" constant="12" id="Fca-qE-4Un"/>
+                                        <constraint firstAttribute="bottom" secondItem="3MS-DL-kJU" secondAttribute="bottom" constant="15" id="P4k-9W-j7a"/>
+                                        <constraint firstItem="CWE-0m-Lz2" firstAttribute="leading" secondItem="BIK-bz-G3m" secondAttribute="leading" constant="12" id="UmD-u9-qaf"/>
+                                        <constraint firstAttribute="trailing" secondItem="3MS-DL-kJU" secondAttribute="trailing" constant="12" id="cPw-gY-KmX"/>
+                                        <constraint firstItem="3MS-DL-kJU" firstAttribute="top" secondItem="BIK-bz-G3m" secondAttribute="top" constant="15" id="iXo-rN-ilu"/>
+                                        <constraint firstAttribute="bottom" secondItem="CWE-0m-Lz2" secondAttribute="bottom" constant="15" id="xU4-EI-QVu"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="headerImage" destination="CWE-0m-Lz2" id="ApM-RG-srn"/>
+                                    <outlet property="nameLabel" destination="3MS-DL-kJU" id="fkz-JB-1Xc"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ItemTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemTableViewCell" rowHeight="100" id="Lj8-Wt-qZv" customClass="ItemTableViewCell" customModule="GameOfThrones" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="144.66666603088379" width="390" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lj8-Wt-qZv" id="FEU-aR-ePO">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLQ-8U-4Ga">
+                                            <rect key="frame" x="12" y="15" width="366" height="70"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="yLQ-8U-4Ga" secondAttribute="trailing" constant="12" id="43h-LJ-4a8"/>
+                                        <constraint firstItem="yLQ-8U-4Ga" firstAttribute="leading" secondItem="FEU-aR-ePO" secondAttribute="leading" constant="12" id="dsv-Sr-SGL"/>
+                                        <constraint firstItem="yLQ-8U-4Ga" firstAttribute="top" secondItem="FEU-aR-ePO" secondAttribute="top" constant="15" id="e8G-Ov-d5d"/>
+                                        <constraint firstAttribute="bottom" secondItem="yLQ-8U-4Ga" secondAttribute="bottom" constant="15" id="hMw-FG-GZc"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="yLQ-8U-4Ga" id="8T3-Zn-46V"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="hyP-BF-vdo" id="xXc-IS-ESt"/>
+                            <outlet property="delegate" destination="hyP-BF-vdo" id="2gB-ZR-svu"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bBX-65-kM4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="276.92307692307691" y="-375.35545023696682"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

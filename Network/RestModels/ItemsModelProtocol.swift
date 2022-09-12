@@ -9,4 +9,5 @@ import Foundation
 
 
 protocol ItemsModelProtocol {
+    var name: String? { get }
 }
