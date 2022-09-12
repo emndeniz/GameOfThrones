@@ -16,7 +16,7 @@ protocol CategoriesWireframeInterface: WireframeInterface {
 }
 
 protocol CategoriesViewInterface: ViewInterface {
-    func fetchCompleted()
+    func stopIndicator()
 }
 
 protocol CategoriesPresenterInterface: PresenterInterface {

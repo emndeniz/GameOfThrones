@@ -64,7 +64,7 @@ extension CategoriesViewController: UITableViewDataSource, UITableViewDelegate {
 }
 
 extension CategoriesViewController: CategoriesViewInterface {
-    func fetchCompleted() {
+    func stopIndicator() {
         activityIndicator.stopAnimating()
     }
     

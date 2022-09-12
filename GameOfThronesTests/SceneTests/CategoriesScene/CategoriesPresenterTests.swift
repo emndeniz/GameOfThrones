@@ -62,7 +62,7 @@ class CategoriesPresenterTests: XCTestCase {
         
     }
     
-    func test_GivenCategoriesArray_WhenNumberOfRowAtIndexCalledForSecondElement_ThenExpectedToSeeTypeOne() throws {
+    func test_GivenCategoriesArray_WhenDidSelectCalledForSecondElement_ThenExpectedToSeeTypeOne() throws {
         
         let houses = JSONTestHelper().readAndDecodeFile(decodeType: HousesResponse.self, name: "HousesSuccessResponse")
         
@@ -80,7 +80,7 @@ class CategoriesPresenterTests: XCTestCase {
     }
     
     
-    func test_GivenFailResponse_WhenNumberOfRowAtIndexCalledForAnyType_ThenExpectedToSeeAlert() throws {
+    func test_GivenFailResponse_WhenDidSelectRowCalledForAnyType_ThenExpectedToSeeAlert() throws {
         
        
         let selectedCategory = defaultCategoryItems[0]
@@ -97,11 +97,30 @@ class CategoriesPresenterTests: XCTestCase {
         XCTAssertEqual(mockWireFrame.alertMessage, CategoriesPresenterErrorMessages.failedToFetchCategories(name:selectedCategory.name).description, "Alert message not matched")
         
     }
+    
+    func test_GivenAnySuccessResponse_WhenDidSelectRowCalledForAnyType_ThenExpectedToSeeStopIndicatorFunctionCalled() throws {
+        sut.didSelectRow(index: 0)
+        
+        XCTAssertTrue(mockView.stopIndicatorCalled,"FecthCompleted function should be called")
+    }
+    
+    func test_GivenAnyFail_WhenDidSelectRowCalledForAnyType_ThenExpectedToSeeStopIndicatorFunctionCalled() throws {
+        mockInteractor.isReturnFailure = true
+        
+        sut.didSelectRow(index: 0)
+        
+        XCTAssertTrue(mockView.stopIndicatorCalled,"FecthCompleted function should be called")
+    }
 
 }
 
 
 private class MockView : CategoriesViewInterface {
+    var stopIndicatorCalled = false
+    func stopIndicator() {
+        stopIndicatorCalled = true
+    }
+    
     
 }
 
