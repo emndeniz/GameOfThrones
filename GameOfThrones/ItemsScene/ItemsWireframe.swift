@@ -32,4 +32,9 @@ final class ItemsWireframe: BaseWireframe<ItemsViewController> {
 // MARK: - Extensions -
 
 extension ItemsWireframe: ItemsWireframeInterface {
+    
+    func navigateToDetailScene(item: ItemsModelProtocol) {
+        // TODO: Will be implemented
+    }
+    
 }

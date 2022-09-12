@@ -11,6 +11,7 @@
 import UIKit
 
 protocol ItemsWireframeInterface: WireframeInterface {
+    func navigateToDetailScene(item:ItemsModelProtocol)
 }
 
 protocol ItemsViewInterface: ViewInterface {
@@ -18,7 +19,7 @@ protocol ItemsViewInterface: ViewInterface {
 
 protocol ItemsPresenterInterface: PresenterInterface {
     var numberOfRows: Int { get }
-    func categoryAtIndex(index:Int, tableView:UITableView) -> ItemsTableCellProtool
+    func cellAtIndex(index:Int, tableView:UITableView) -> ItemsTableCellProtool
     func didSelectRow(index:Int)
 }
 

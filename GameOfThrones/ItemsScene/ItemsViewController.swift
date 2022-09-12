@@ -39,7 +39,7 @@ extension ItemsViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = presenter.categoryAtIndex(index: indexPath.row, tableView: tableView) as! UITableViewCell
+        let cell = presenter.cellAtIndex(index: indexPath.row, tableView: tableView) as! UITableViewCell
         return cell
     }
     

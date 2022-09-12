@@ -43,7 +43,7 @@ extension ItemsPresenter: ItemsPresenterInterface {
         return items.count
     }
     
-    func categoryAtIndex(index: Int,tableView:UITableView) -> ItemsTableCellProtool {
+    func cellAtIndex(index: Int,tableView:UITableView) -> ItemsTableCellProtool {
         let data = items[index]
         
         let name = data.name ?? "Name not provided"
@@ -61,7 +61,7 @@ extension ItemsPresenter: ItemsPresenterInterface {
     
     func didSelectRow(index: Int) {
         let selectedRow = items[index]
-        print(selectedRow)
+        wireframe.navigateToDetailScene(item: selectedRow)
     }
     
 }
