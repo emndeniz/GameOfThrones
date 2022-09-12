@@ -1,5 +1,12 @@
 # GameOfThrones
+
 This repository contains an iOS application that shows data from the Game Of Thrones universe.
+
+![](https://badgen.net/badge/Language:/Swift/orange)
+![](https://badgen.net/badge/UnitTestCount:/40/green)
+![](https://badgen.net/badge/Coverage:/79.28/blue)
+
+## Summary
 
 Application fetches data from  [https://androidtestmobgen.docs.apiary.io ]() API.
 
