@@ -20,6 +20,7 @@ final class ItemsViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title =  presenter.navigationBarTitle
     }
 
 }

@@ -34,7 +34,7 @@ final class ItemsWireframe: BaseWireframe<ItemsViewController> {
 extension ItemsWireframe: ItemsWireframeInterface {
     
     func navigateToDetailScene(item: ItemsModelProtocol) {
-        // TODO: Will be implemented
+        navigationController?.pushWireframe(DetailsWireframe(item: item))
     }
     
 }

@@ -115,6 +115,35 @@ class ItemsPresenterTests: XCTestCase {
     
     }
     
+    func test_GivenSuccessHousesResponse_WhenNavigationBarTitleCalled_ThenExpectedToSeeHouses() throws {
+        let houses = JSONTestHelper().readAndDecodeFile(decodeType: HousesResponse.self, name: "HousesSuccessResponse")
+        
+        sut = ItemsPresenter(view: mockView,
+                             interactor: mockInteractor,
+                             wireframe: mockWireFrame, items: houses)
+        
+        XCTAssertEqual(sut.navigationBarTitle, "Houses")
+    }
+    
+    func test_GivenSuccessBooksResponse_WhenNavigationBarTitleCalled_ThenExpectedToSeeBooks() throws {
+        let houses = JSONTestHelper().readAndDecodeFile(decodeType: BooksResponse.self, name: "BooksSuccessResponse")
+        
+        sut = ItemsPresenter(view: mockView,
+                             interactor: mockInteractor,
+                             wireframe: mockWireFrame, items: houses)
+        
+        XCTAssertEqual(sut.navigationBarTitle, "Books")
+    }
+ 
+    func test_GivenSuccessBooksCharacters_WhenNavigationBarTitleCalled_ThenExpectedToSeeCharacters() throws {
+        let houses = JSONTestHelper().readAndDecodeFile(decodeType: CharactersResponse.self, name: "CharactersSuccessResponse")
+        
+        sut = ItemsPresenter(view: mockView,
+                             interactor: mockInteractor,
+                             wireframe: mockWireFrame, items: houses)
+        
+        XCTAssertEqual(sut.navigationBarTitle, "Characters")
+    }
     
     
 }

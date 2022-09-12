@@ -12,7 +12,7 @@ import Foundation
 
 typealias HousesResponse = [HousesResponseElement]
 
-struct HousesResponseElement: Decodable, ItemsModelProtocol {
+struct HousesResponseElement: ItemsModelProtocol {
     let id, name, region, title: String?
     
 }

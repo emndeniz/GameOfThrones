@@ -8,6 +8,6 @@
 import Foundation
 
 
-protocol ItemsModelProtocol {
+protocol ItemsModelProtocol : Codable{
     var name: String? { get }
 }

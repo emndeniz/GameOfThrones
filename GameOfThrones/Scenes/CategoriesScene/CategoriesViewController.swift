@@ -11,9 +11,9 @@
 import UIKit
 
 final class CategoriesViewController: UIViewController {
-
+    
     // MARK: - Public properties -
-
+    
     var presenter: CategoriesPresenterInterface!
     
     @IBOutlet weak var tableView: UITableView! {
@@ -25,13 +25,19 @@ final class CategoriesViewController: UIViewController {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     // MARK: - Lifecycle -
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Categories"
         activityIndicator.hidesWhenStopped = true
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if let index = self.tableView.indexPathForSelectedRow{
+            self.tableView.deselectRow(at: index, animated: true)
+        }
+    }
+    
 }
 
 // MARK: - Extensions -
@@ -44,7 +50,7 @@ extension CategoriesViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return presenter.numberOfRows
     }
