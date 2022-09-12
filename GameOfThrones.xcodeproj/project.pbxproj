@@ -80,6 +80,7 @@
 		01C641FE28CF54BC00D2D33E /* DetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C641F828CF54BC00D2D33E /* DetailsInteractor.swift */; };
 		01C641FF28CF54BC00D2D33E /* DetailsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C641F928CF54BC00D2D33E /* DetailsWireframe.swift */; };
 		01C6420128CF5DFD00D2D33E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C6420028CF5DFD00D2D33E /* Extensions.swift */; };
+		01C6420628CF637900D2D33E /* DetailsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C6420528CF637900D2D33E /* DetailsPresenterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -176,6 +177,7 @@
 		01C641F828CF54BC00D2D33E /* DetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsInteractor.swift; sourceTree = "<group>"; };
 		01C641F928CF54BC00D2D33E /* DetailsWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsWireframe.swift; sourceTree = "<group>"; };
 		01C6420028CF5DFD00D2D33E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		01C6420528CF637900D2D33E /* DetailsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +280,7 @@
 		01653C5628CCCBB0006D616E /* SceneTests */ = {
 			isa = PBXGroup;
 			children = (
+				01C6420428CF636100D2D33E /* DetailsScene */,
 				015B8D1428CF241E004E2149 /* ItemsScene */,
 				0126D1DB28CD308500A51FE4 /* CategoriesScene */,
 				01653C5728CCCBB9006D616E /* SplashSceneTests */,
@@ -534,6 +537,14 @@
 			path = DetailsScene;
 			sourceTree = "<group>";
 		};
+		01C6420428CF636100D2D33E /* DetailsScene */ = {
+			isa = PBXGroup;
+			children = (
+				01C6420528CF637900D2D33E /* DetailsPresenterTests.swift */,
+			);
+			path = DetailsScene;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -739,6 +750,7 @@
 				0126D1DF28CE835000A51FE4 /* CategoriesPresenterTests.swift in Sources */,
 				01653C5B28CCDE6D006D616E /* SplashPresenterTests.swift in Sources */,
 				01B3FE3828C93DBA00B97EDD /* GameOfThronesTests.swift in Sources */,
+				01C6420628CF637900D2D33E /* DetailsPresenterTests.swift in Sources */,
 				01B3FE6B28CA6E1200B97EDD /* MockURLProtocol.swift in Sources */,
 				01B3FE8B28CA8E1E00B97EDD /* HousesServiceTests.swift in Sources */,
 				01BE698428CBDC6A0008067B /* PersistencyTests.swift in Sources */,
