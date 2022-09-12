@@ -49,6 +49,6 @@ jobs:
           scheme: ${{ 'default' }}
           platform: ${{ 'iOS Simulator' }}
           project: ${{ 'GameOfThrones.xcodeproj' }}
-          minimumCoverage: ${{ 80.0 }}
+          minimumCoverage: ${{ 75.0 }}
         run: |
           xcov -p "$project" -o xcov_output_got -s "$scheme" -m $minimumCoverage
