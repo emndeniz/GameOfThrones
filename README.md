@@ -34,7 +34,7 @@ Using the network layer the application can fetch data from API. On top of the n
 
 You can see an example API call below;
 
-```
+```swift
 var serviceProvider: ServiceProvider<CategoriesSevice> = ServiceProvider<CategoriesSevice> = ServiceProvider<CategoriesSevice>()
 
 serviceProvider.request(service: .categories, decodeType: CategoriesResponse.self) {
@@ -63,7 +63,7 @@ CategoryStore uses CoreDataStack to interact with Core Data and does desired dat
 Sample usage of persistency layer;
 
 
-```
+```swift
 let coreDataStack: CoreDataStack = CoreDataStack()
 let categoryStore = CategoryStore(
   managedObjectContext: coreDataStack.mainContext, coreDataStack: coreDataStack)
