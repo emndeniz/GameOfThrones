@@ -21,6 +21,7 @@ protocol ItemsPresenterInterface: PresenterInterface {
     var numberOfRows: Int { get }
     func cellAtIndex(index:Int, tableView:UITableView) -> ItemsTableCellProtool
     func didSelectRow(index:Int)
+    var navigationBarTitle : String { get }
 }
 
 protocol ItemsInteractorInterface: InteractorInterface {

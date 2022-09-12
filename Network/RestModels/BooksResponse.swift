@@ -10,7 +10,7 @@ import Foundation
 
 /// This a model struct for  'Books' type responses
 /// https://androidtestmobgen.docs.apiary.io/#reference/0/list-1-retrieve/list-books
-struct BooksResponseElement: Decodable, ItemsModelProtocol {
+struct BooksResponseElement: ItemsModelProtocol {
     let name, isbn: String?
     let authors: [String]?
     let numberOfPages: Int?

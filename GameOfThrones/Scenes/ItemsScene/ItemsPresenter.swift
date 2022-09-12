@@ -38,6 +38,16 @@ final class ItemsPresenter {
 // MARK: - Extensions -
 
 extension ItemsPresenter: ItemsPresenterInterface {
+    var navigationBarTitle: String {
+        let first = items[0]
+        if first is HousesResponseElement {
+            return "Houses"
+        }else if first is BooksResponseElement {
+            return "Books"
+        }else {
+            return "Characters"
+        }
+    }
     
     var numberOfRows: Int {
         return items.count
