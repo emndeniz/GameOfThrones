@@ -17,9 +17,9 @@ The application has 4 scenes;
 * Categories
   - Shows category list to the user. Users can select any category to see related items.
 * Items
- - Shows item list to the user. Items can be Books, Houses, and Characters. User can select an item to see it's details
+  - Shows item list to the user. Items can be Books, Houses, and Characters. Users can select an item to see its details
 * Details. 
- - Shows all fetched data for the selected item.
+  - Shows all fetched data for the selected item.
 
 ### Preview: 
 ![](https://media.giphy.com/media/8IvKCpzm7ohdVVKEa2/giphy.gif)
