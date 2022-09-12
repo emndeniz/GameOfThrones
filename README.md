@@ -12,13 +12,13 @@ Application fetches data from  [https://androidtestmobgen.docs.apiary.io ]() API
 
 The application has 4 scenes; 
 
-* Splash Scene
+* **Splash Scene:**
  -	Fetches categories and stores them on the App.
-* Categories
+* **Categories:**
   - Shows category list to the user. Users can select any category to see related items.
-* Items
+* **Items:**
   - Shows item list to the user. Items can be Books, Houses, and Characters. Users can select an item to see its details
-* Details. 
+* **Details:**
   - Shows all fetched data for the selected item.
 
 ### Preview: 
