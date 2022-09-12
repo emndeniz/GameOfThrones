@@ -306,10 +306,8 @@
 		01B3FE1C28C93DB900B97EDD /* GameOfThrones */ = {
 			isa = PBXGroup;
 			children = (
+				01C641F228CF4F2200D2D33E /* Scenes */,
 				014B79FE28CCAC41003A7C93 /* BaseViper */,
-				014B7A0B28CCAD13003A7C93 /* ItemsScene */,
-				014B79F528CCAB9B003A7C93 /* CategoriesScene */,
-				014B79F428CCAB42003A7C93 /* SplashScene */,
 				01B3FE1D28C93DB900B97EDD /* AppDelegate.swift */,
 				01B3FE1F28C93DB900B97EDD /* SceneDelegate.swift */,
 				01B3FE2328C93DB900B97EDD /* Main.storyboard */,
@@ -495,6 +493,16 @@
 				01BE699028CBF14D0008067B /* Logger.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		01C641F228CF4F2200D2D33E /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				014B7A0B28CCAD13003A7C93 /* ItemsScene */,
+				014B79F528CCAB9B003A7C93 /* CategoriesScene */,
+				014B79F428CCAB42003A7C93 /* SplashScene */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
