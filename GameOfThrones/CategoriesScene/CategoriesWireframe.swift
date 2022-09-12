@@ -36,7 +36,7 @@ final class CategoriesWireframe: BaseWireframe<CategoriesViewController> {
 
 extension CategoriesWireframe: CategoriesWireframeInterface {
     func navigateToItemsScene(items: [ItemsModelProtocol]) {
-        // TODO: Will be implement
+        navigationController?.pushWireframe(ItemsWireframe(items: items))
     }
     
 }

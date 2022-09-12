@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "200px-House_Martell.png",
+      "filename" : "200px-House_Stark.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "200px-House_Martell@2x.png",
+      "filename" : "200px-House_Stark@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "200px-House_Martell@3x.png",
+      "filename" : "200px-House_Stark@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
