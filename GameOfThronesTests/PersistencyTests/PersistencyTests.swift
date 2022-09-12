@@ -67,20 +67,33 @@ class PersistencyTests: XCTestCase {
         // Given
         let category1 = CategoryItem(name: "Books", type: 0)
         let category2 = CategoryItem(name: "Houses", type: 1)
+        var categoryArray = [category1,category2]
         // Save categories to Core Data to call it on get.
-        categoryStore.saveCategories(categories: [category1,category2])
+        categoryStore.saveCategories(categories: categoryArray)
         
         // When
         let categories = categoryStore.getCategories()
         
         XCTAssertNotNil(categories, "Report should not be nil")
         XCTAssertEqual(categories.count, 2, "There should be 2 item")
-        XCTAssertEqual(categories[0].name, "Books","First category name should be books")
-        XCTAssertEqual(categories[0].type, 0,"First category type should be books")
-        XCTAssertEqual(categories[1].name, "Houses","Second category name should be books")
-        XCTAssertEqual(categories[1].type, 1,"Second category type should be books")
-    }
-  
+        
+        for category in categories {
+            
+            if category.name == category1.name {
+                XCTAssertEqual(category.type, 0,"Category type should be books")
+            }else {
+                XCTAssertEqual(category.type, 1,"Category type should be Houses")
+            }
+            
+            let index = categoryArray.firstIndex { item in
+                item.name == category.name
+            }
+            
+            // Remove elements to ensure elements are correct
+            categoryArray.remove(at: index!)
+        }
+        XCTAssertEqual(categoryArray.count, 0,"Categories array shouşd be empty")
 
+    }
 
 }
