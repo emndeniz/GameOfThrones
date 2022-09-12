@@ -1,6 +1,7 @@
 name: iOS starter workflow
 
 on:
+  workflow_dispatch:
   push:
     branches: [ "main" ]
   pull_request:
@@ -42,3 +43,12 @@ jobs:
           if [ "`ls -A | grep -i \\.xcworkspace\$`" ]; then filetype_parameter="workspace" && file_to_build="`ls -A | grep -i \\.xcworkspace\$`"; else filetype_parameter="project" && file_to_build="`ls -A | grep -i \\.xcodeproj\$`"; fi
           file_to_build=`echo $file_to_build | awk '{$1=$1;print}'`
           xcodebuild test-without-building -scheme "$scheme" -"$filetype_parameter" "$file_to_build" -destination "platform=$platform,name=$device"
+          
+      - name: Coverage
+        env:
+          scheme: ${{ 'default' }}
+          platform: ${{ 'iOS Simulator' }}
+          project: ${{ 'GameOfThrones.xcodeproj' }}
+          minimumCoverage: ${{ 75.0 }}
+        run: |
+          xcov -p "$project" -o xcov_output_got -s "$scheme" -m $minimumCoverage
